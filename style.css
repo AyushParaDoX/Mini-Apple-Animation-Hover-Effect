@@ -1,0 +1,53 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222;
+}
+.logo{
+    position: relative;
+    display: flex;
+}
+.logo span{
+    position: relative;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo span b{
+    font-size: 6em;
+    font-weight: 700;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    transition: 0.5s;
+}
+.logo span::before
+{
+    content: '\f179';
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    font-size: 6em;
+    height: 0%;
+    overflow: hidden;
+    left: 0;
+    top: -4px;
+    text-align: center;
+    line-height: 120px;
+    color: #fff;
+    border-bottom: 1px solid white;
+    transition: 1.5s;
+}
+.logo span:hover::before{
+   height: 100%;
+   filter: drop-shadow(0 0 20px #87cefa);
+}
